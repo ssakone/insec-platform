@@ -14,12 +14,9 @@ jobs:
         with:
           node-version: 16
 
-      - uses: pnpm/action-setup@v2
-        name: 📦️ Install pnpm
-        with:
-          version: 7
-          run_install: false 
-
+      - name: 📦️ Install pnpm
+        run: npm install -g pnpm
+        
       - name: ➕ Install dependencies
         run: pnpm install
 
